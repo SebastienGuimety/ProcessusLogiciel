@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Générateur de mot de passe aléatoire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="checkbox"], input[type="number"] {
+            margin-bottom: 10px;
+        }
+
+        button {
+            display: block;
+            margin: 10px auto;
+        }
+
+        #motDePasseGenere {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+    <script type="text/javascript">
+        // Fonction pour générer un mot de passe aléatoire
+        function genererMotDePasse() {
+            // ... le reste du code JavaScript pour la génération du mot de passe ...
+            // Définition des caractères possibles pour chaque catégorie
+            var majuscules = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var chiffres = "0123456789";
+            var caracteresSpeciaux = "!@#$%^&*()_+[]{}|;':\"<>,.?/";
+            
+            // Récupération des choix de l'utilisateur
+            var inclureMajuscules = document.getElementById("chkMajuscules").checked;
+            var inclureMinuscules = document.getElementById("chkMinuscules").checked;
+            var inclureChiffres = document.getElementById("chkChiffres").checked;
+            var inclureCaracteresSpeciaux = document.getElementById("chkCaracteresSpeciaux").checked;
+            
+        }
+    </script>
+</head>
+<body>
+    <h1>Générateur de mot de passe aléatoire</h1>
+    <form>
+        <label for="chkMajuscules">
+            <input type="checkbox" id="chkMajuscules">Inclure des majuscules
+        </label>
+        <label for="chkChiffres">
+            <input type="checkbox" id="chkChiffres">Inclure des chiffres
+        </label>
+        <label for="chkCaracteresSpeciaux">
+            <input type="checkbox" id="chkCaracteresSpeciaux">Inclure des caractères spéciaux
+        </label>
+        <label for="longueurMotDePasse">
+            Longueur du mot de passe : 
+            <input type="number" id="longueurMotDePasse" min="1" max="100" value="8">
+        </label>
+        <button type="button" onclick="genererMotDePasse()">Générer le mot de passe</button>
+    </form>
+    <p id="motDePasseGenere"></p>
+</body>
+</html>
