@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Générateur de mot de passe aléatoire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="checkbox"], input[type="number"] {
+            margin-bottom: 10px;
+        }
+
+        button {
+            display: block;
+            margin: 10px auto;
+        }
+
+        #motDePasseGenere {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Générateur de mot de passe aléatoire</h1>
+    <form action="http://localhost:8080/contact/test/generatePwd" method="post">
+        <label for="chkMajuscules">
+            <input type="checkbox" id="chkMajuscules" name="chkMajuscules" value="majuscules">Inclure des majuscules
+        </label>
+        <label for="chkChiffres">
+            <input type="checkbox" id="chkChiffres" name="chkChiffres" value="chifre">Inclure des chiffres
+        </label>
+        <label for="chkCaracteresSpeciaux">
+            <input type="checkbox" id="chkCaracteresSpeciaux" name="chkCaracteresSpeciaux" value="Cspe">Inclure des caractères spéciaux
+        </label>
+        <label for="longueurMotDePasse">
+            Longueur du mot de passe : 
+            <input type="text" id="longueurMotDePasse" name="longueurMotDePasse">
+        </label>
+        
+        <input type="submit" value="submit">
+        
+    </form>
+    <p id="motDePasseGenere"></p>
+</body>
+</html>
