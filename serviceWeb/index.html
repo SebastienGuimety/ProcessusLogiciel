@@ -37,6 +37,15 @@
             font-weight: bold;
         }
     </style>
+    <script type="javascript">
+        function onchange(){
+            var force=document.getElementById("selectForce");
+            if (force.valueOf()!=" "){
+                var nb=document.getElementById("longueurMotDePasse");
+                nb.hidden;
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>Générateur de mot de passe aléatoire</h1>
@@ -49,6 +58,18 @@
         </label>
         <label for="chkCaracteresSpeciaux">
             <input type="checkbox" id="chkCaracteresSpeciaux" name="chkCaracteresSpeciaux" value="Cspe">Inclure des caractères spéciaux
+        </label>
+        <label for="selectForce">
+            force du mot de passe :
+            <select name="selectForce" id="selectForce" onchange="onchange();">
+                <option value="">--Please choose an option--</option>
+                <option value="faible">faible</option>
+                <option value="moyen">moyen</option>
+                <option value="fort">fort</option>
+                <option value="tresFort">tres fort</option>
+
+
+            </select>
         </label>
         <label for="longueurMotDePasse">
             Longueur du mot de passe : 
